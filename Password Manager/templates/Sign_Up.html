@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="shortcut icon" href="../static/image/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/stylesheet/style.css"/>
+  </head>
+  <body>
+    {% load static %}
+    <div class="outer-box">
+      <form action="/" method="post">
+        {% csrf_token %}
+        <div id="msg">
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{{ message }}</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+          {% endif %}
+        </div>
+        <div class="inner-box">
+          <header class="box head">
+            <div class="head-logo">
+              <h3>Sign Up</h3>
+              <p>It just take 30 second !!</p>
+            </div>
+          </header>
+          <main class="box signup-page">
+            <p>
+              <lable for="username">Username :</lable>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your name"
+                required
+              />
+            </p>
+            <p>
+              <lable for="useremail">Email :</lable>
+              <input
+                type="email"
+                id="useremail"
+                name="emailId"
+                placeholder="Enter your email"
+                required
+              />
+            </p>
+            <p>
+              <lable for="newpass">New Password :</lable>
+              <input
+                type="password"
+                id="newpass"
+                name="password1"
+                placeholder="Enter your password"
+                required
+              />
+            </p>
+            <p>
+              <lable for="confirmpass">Confirm Password :</lable>
+              <input
+                type="password"
+                id="confirmpass"
+                name="password2"
+                placeholder="Confirm password"
+              />
+            </p>
+            <p><input type="submit" value="Sign Up" /></p>
+          </main>
+          <footer class="box foot">
+            <p>If already have an account, <a href="/signin/">Log in</a></p>
+          </footer>
+        </div>
+      </form>
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="shortcut icon" href="../static/image/Sign_in.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/stylesheet/style.css"/>
+  </head>
+  <body>
+    {% load static %}
+    <div class="outer-box">
+      <form action="/signin/" method="post">
+        {% csrf_token %}
+        <div id="msg">
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{{ message }}</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+          {% endif %}
+        </div>
+        <div class="inner-box">
+          <header class="box head">
+            <div class="head-logo">
+              <h3>Sign In</h3>
+              <p>It just take 30 second !!</p>
+            </div>
+          </header>
+          <main class="box signup-page">
+            <p>
+              <lable for="username">Username :</lable>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your name"
+                required
+              />
+            </p>
+            <p>
+              <lable for="confirmpass">Password :</lable>
+              <input
+                type="password"
+                id="confirmpass"
+                name="password"
+                placeholder="Confirm password"
+              />
+            </p>
+            <p><input type="submit" value="Sign In" /></p>
+          </main>
+          <footer class="box foot">
+            <p>If you have no account then <a href="/">Create One</a></p>
+          </footer>
+        </div>
+      </form>
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

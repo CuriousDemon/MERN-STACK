@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bitter", serif;
+}
+
+.outer-box {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to top left, #00b4d8, #90e0ef);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.inner-box {
+  background-image: linear-gradient(to top ,#CAF0F8,#90E0EF33);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #d7eef3;
+  z-index: 2;
+}
+
+.box {
+  margin: 15px 10px;
+}
+
+.head-logo h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #0077b6;
+  text-shadow: 0px 0px 5px #308796c0;
+  line-height: 2rem;
+}
+
+.head-logo p {
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: green;
+}
+
+.signup-page p {
+  margin: 10px;
+}
+
+.signup-page p label{
+    display: block;
+    color: #023047;
+}
+
+.signup-page p input{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0px;
+    background-color: #caf0f8;
+    color: #023047;
+    border: 1.5px solid #023047;
+    border-radius: 3px;
+    
+}
+
+.signup-page p input::placeholder
+{
+    color: #023047;
+}
+
+.signup-page p input[type="submit"]{
+    background-color: #0077b6;
+    color: whitesmoke;
+}
+
+.signup-page p input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #023047;
+
+}
+
+.foot{
+    text-align: center;
+}
+
+.foot a{
+    color: #0077b6;
+}
+
+.circle{
+    background-image: linear-gradient( to top left,#0077B655,#CAF0F8);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.c1{
+    position: absolute;
+    top: 40px;
+    left:40px;
+}
+.c2{
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+}
+
+.outer-box #msg{
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  height: 20px;
+  width: ;
+  z-index: 4;
+}

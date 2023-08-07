@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Password Manager</title>
+    <link
+      rel="shortcut icon"
+      href="./image/icon/lock-solid.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/65a39c233e.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar-container">
+      <nav class="navbar flex">
+        <div class="navbar-icon">
+          <i class="fa-solid fa-lock"></i> Password Manager
+        </div>
+        <div class="navbar-items">
+          <ul class="flex">
+            <li class="items"><a href="#" class="items-link">Home</a></li>
+            <li class="items"><a href="javascript:;"  onclick="displayModel('login-model');"  class="items-link">Sign In</a></li>
+            <li class="items"><a href="javacript:;" onclick="displayModel('signup-model');" class="items-link">Sign Up</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Models -->
+    <div class="models-wraper flex" >
+        <i class="fa-solid fa-xmark" id="close-btn"></i>
+
+      <!-- login models -->
+      <div class="models" id="login-model">
+        <form action="#">
+          <h2>Log in</h2>
+          <p>
+            <label for="uname">Username : </label>
+            <input
+              type="text"
+              name="username"
+              id="uname"
+              placeholder="username"
+            />
+          </p>
+          <p>
+            <label for="upass">Password : </label>
+            <input
+              type="password"
+              name="password"
+              id="upass"
+              placeholder="password"
+            />
+          </p>
+          <input type="submit" value="Log in" />
+        </form>
+      </div>
+
+      <!-- sign up model -->
+
+      <div class="models" id="signup-model">
+        <form action="#">
+          <h2>Sign Up</h2>
+          <p>
+            <label for="uname">Username : </label>
+            <input
+              type="text"
+              name="username"
+              id="uname"
+              placeholder="username"
+            />
+          </p>
+          <p>
+            <label for="uemail">Email : </label>
+            <input
+              type="email"
+              name="email"
+              id="uemail"
+              placeholder="email"
+            />
+          </p>
+          <p>
+            <label for="upass">Password : </label>
+            <input
+              type="password"
+              name="password"
+              id="upass"
+              placeholder="password"
+            />
+          </p>
+          <p>
+            <label for="ucpass"> Confirm Password : </label>
+            <input
+              type="password"
+              name="Cpassword"
+              id="ucpass"
+              placeholder="confirm password"
+            />
+          </p>
+          <input type="submit" value="Sign Up" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

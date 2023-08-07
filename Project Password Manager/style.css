@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@400;500;600;700&display=swap");
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif Vithkuqi", serif;
+}
+
+:root {
+  --primary-text-color: #8a2ad5;
+  --secondary-text-color: #d58a2a;
+  --tertiary-text-color: #2ad58a;
+}
+
+body{
+    background-color: rgb(31, 29, 29);
+}
+/* useful style */
+
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+i {
+  color: var(--secondary-text-color);
+}
+
+/* navbar */
+
+.navbar-container{
+    box-shadow: 0px 0px 10px whitesmoke;
+    height: 80px;
+    padding: 0px 50px;
+}
+
+.navbar{
+    align-items: center;
+}
+.navbar .navbar-icon{
+    color: var(--tertiary-text-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+
+}
+
+.navbar .navbar-items ul{
+    color: var(--primary-text-color);
+    gap: 50px;
+    font-size: 1.2rem;
+}
+.navbar .navbar-items .items{
+    padding-top: 15px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.navbar .navbar-items .items:hover{
+    color: whitesmoke;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media screen and (max-width:760px) {
+    .navbar-container{
+        height: 100px;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar .navbar-items ul{
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .navbar-container{
+        height: 210px;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar .navbar-items{
+        align-self: flex-start;
+    }
+    .navbar .navbar-items ul{
+        flex-direction: column;
+        gap: 0px;
+        padding: 5px 0px;
+    }
+
+}
+
+/* models */
+
+/* login models */
+
+.models-wraper{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(246, 235, 235, 0.732);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.models{
+    width: 500px;
+    min-height: 350px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: none;
+}
+
+.models input{
+ width: 60%;
+ padding: 5px 10px;
+ margin: 15px 0px;
+ border: none;
+ border-radius: 4px;
+}
+.models input[type="submit"]{
+ width: 100%;
+}
+
+.models input[id="ucpass"]{
+ width: 50%;
+}
+
+#close-btn{
+    color: red;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: var(--tertiary-text-color);
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width:500px) {
+    #close-btn{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    .models{
+        min-width: 300px;
+        min-height: 300px;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        display: none;
+        position: absolute;
+        top: 80px;
+    }
+}

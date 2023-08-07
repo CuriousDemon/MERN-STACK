@@ -18,3 +18,22 @@ if (modelWrapper) {
     });
   }
 }
+
+// copy clipboard
+
+const copies = document.getElementById("copy")
+
+const copy = (id)=>{
+    if (id == "url") {
+
+        var copyElement = document.getElementById("url")
+    } else {
+        var copyElement = document.getElementById("urlPass")
+        
+    }
+    copyElement.select();
+    navigator.clipboard.writeText(copyElement.value)
+}
+
+
+

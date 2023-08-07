@@ -123,6 +123,7 @@ i {
 }
 
 .models{
+    border-radius: 10px;
     width: 500px;
     min-height: 350px;
     background-color: black;
@@ -150,7 +151,7 @@ i {
 }
 
 #close-btn{
-    color: red;
+    color:red;
     position: absolute;
     top: 50px;
     right: 50px;
@@ -179,4 +180,14 @@ i {
         position: absolute;
         top: 80px;
     }
+}
+
+/* view-model */
+
+#view-model input{
+color: whitesmoke;
+}
+
+#view-model i:hover{
+cursor: pointer;
 }

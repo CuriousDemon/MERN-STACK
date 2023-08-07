@@ -39,16 +39,46 @@
         <div class="navbar-items">
           <ul class="flex">
             <li class="items"><a href="#" class="items-link">Home</a></li>
-            <li class="items"><a href="javascript:;"  onclick="displayModel('login-model');"  class="items-link">Sign In</a></li>
-            <li class="items"><a href="javacript:;" onclick="displayModel('signup-model');" class="items-link">Sign Up</a></li>
+            <li class="items">
+              <a
+                href="javascript:;"
+                onclick="displayModel('login-model');"
+                class="items-link"
+                >Sign In</a
+              >
+            </li>
+            <li class="items">
+              <a
+                href="javacript:;"
+                onclick="displayModel('signup-model');"
+                class="items-link"
+                >Sign Up</a
+              >
+            </li>
+            <li class="items">
+              <a
+                href="javacript:;"
+                onclick="displayModel('view-model');"
+                class="items-link"
+                >View</a
+              >
+            </li>
+            <li class="items">
+              <a
+                href="javacript:;"
+                onclick="displayModel('add-password-model');"
+                class="items-link"
+                >Add</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
     </div>
 
     <!-- Models -->
-    <div class="models-wraper flex" >
-        <i class="fa-solid fa-xmark" id="close-btn"></i>
+    <div class="models-wraper flex">
+      <i class="fa-solid fa-xmark" id="close-btn"></i>
 
       <!-- login models -->
       <div class="models" id="login-model">
@@ -92,12 +122,7 @@
           </p>
           <p>
             <label for="uemail">Email : </label>
-            <input
-              type="email"
-              name="email"
-              id="uemail"
-              placeholder="email"
-            />
+            <input type="email" name="email" id="uemail" placeholder="email" />
           </p>
           <p>
             <label for="upass">Password : </label>
@@ -118,6 +143,64 @@
             />
           </p>
           <input type="submit" value="Sign Up" />
+        </form>
+      </div>
+
+      <!-- view model -->
+      <div class="models" id="view-model">
+        <h2>Url & Password</h2>
+        <p>
+          <label for="url">URL : </label>
+          <input
+            type="text"
+            name="username"
+            id="url"
+            placeholder="URl"
+            value="www.facebook.com"
+            disabled
+          />
+          <i class="fa-regular fa-copy" id="copy" onclick="copy('url');"></i>
+        </p>
+        <p>
+          <label for="urlPass">Password : </label>
+          <input
+            type="password"
+            id="urlPass"
+            placeholder="password"
+            value="password"
+            disabled
+          />
+          <i
+            class="fa-regular fa-copy"
+            id="copy"
+            onclick="copy('urlPass');"
+          ></i>
+        </p>
+      </div>
+
+      <!-- Add password model -->
+      <div class="models" id="add-password-model">
+        <form action="#">
+          <h2>Add Url & Password</h2>
+          <p>
+            <label for="siteurl">URL : </label>
+            <input
+              type="text"
+              name="url"
+              id="siteurl"
+              placeholder="url of a website"
+            />
+          </p>
+          <p>
+            <label for="urlPass">Password : </label>
+            <input
+              type="password"
+              name="urlPassword"
+              id="urlPass"
+              placeholder="url password"
+            />
+          </p>
+          <input type="submit" value="Save"/>
         </form>
       </div>
     </div>

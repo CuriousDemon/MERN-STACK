@@ -1,14 +1,15 @@
 // display model
 const modelWrapper = document.querySelector(".models-wraper");
-let count = 0;
+var count = 0;
 if (modelWrapper) {
   function displayModel(id) {
     const model = document.getElementById(id);
     if (count == 0) {
         modelWrapper.style.display = "flex";
         model.style.display = "block";
+        count++;
+        // console.log(count);
     }
-    count++;
     const closeModel = document.getElementById("close-btn");
     //   close model
     closeModel.addEventListener("click", () => {
@@ -36,4 +37,17 @@ const copy = (id)=>{
 }
 
 
+// prevent reload
 
+// const signupId = document.getElementById("signupId")
+
+// function submitForm(event) {
+//   event.preventDefault();
+//   var username = document.getElementById("uname").value;
+//   var email = document.getElementById("email").value;
+//   var password1 = document.getElementById("upass").value;
+//   var password2 = document.getElementById("ucpass").value;
+//   console.log(username,email,password1,password2)
+// }
+
+// signupId.addEventListener("submit",submitForm);

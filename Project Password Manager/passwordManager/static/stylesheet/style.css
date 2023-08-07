@@ -108,6 +108,19 @@ i {
 
 }
 
+/* message */
+#messages {
+    color: white ;
+    text-align: center;
+    margin: 10px 0px;
+    position: absolute;
+    /* left: 500px; */
+    width: 100%;
+    box-shadow: 0px 0px 10px lightyellow;
+    background: linear-gradient(to right,rgba(163, 149, 15, 0.43),rgba(0, 0, 0, 0.963));
+    z-index: 3;
+}
+
 /* models */
 
 /* login models */
@@ -191,3 +204,6 @@ color: whitesmoke;
 #view-model i:hover{
 cursor: pointer;
 }
+
+
+

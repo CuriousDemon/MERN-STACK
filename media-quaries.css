@@ -1,0 +1,149 @@
+@media screen and (max-width: 991px) {
+    .nav-toggle i:hover{
+        cursor: pointer;
+    }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+  .nav-toggle {
+    display: block;
+    margin-right: 20px;
+  }
+  .main-nav{
+    overflow: initial;
+  }
+
+  .nav-links{
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: -100%;
+    width: 100vw;
+    padding-block: 30px; 
+    transition: all 0.36s ease-in-out;
+
+  }
+
+  .nav-links ul{
+    flex-direction: column;
+    
+  }
+
+  #toggle-btn:checked ~ .nav-links{
+    left: 0%;
+  }
+
+
+  .feature-section{
+    margin-top: 50px;
+  }
+
+  .examples-header h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .examples-area {
+    gap: 20px;
+  }
+
+  .examples-card {
+    width: calc(50% - 20px);
+    height: 200px;
+  }
+
+  .cta-section {
+    padding: 70px;
+  }
+
+  .footer-container {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .primary-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-section {
+    flex-direction: column-reverse;
+  }
+
+  .header-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .feature-section{
+    margin-top: 30px;
+  }
+
+  .feature-card {
+    min-width: calc(50% - 20px);
+  }
+
+  .big-feature-container,
+  .big-feature-middle {
+    flex-direction: column;
+  }
+
+  .examples-header h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .link-column {
+    align-items: stretch;
+  }
+
+  .sub-footer-container {
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  :root {
+    --padding-inline-section: 8px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .feature-card{
+    min-width: 100%;
+  }
+
+  .examples-card{
+    min-width: 100%;
+  }
+
+  .cta-section{
+    padding: 30px var(--padding-inline-section);
+  }
+  .cta-section-container p{
+    text-align: center;
+  }
+
+  .sub-footer-container{
+    text-align: center;
+  }
+}
